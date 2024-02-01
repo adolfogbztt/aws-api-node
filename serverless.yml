@@ -1,14 +1,52 @@
 service: aws-node-http-api-project
 frameworkVersion: '3'
-region: us-west-2
+
 provider:
   name: aws
   runtime: nodejs18.x
+  region: us-east-2
 
+# environment:
+#     TABLE_PLANETAS:
+#       Ref: PlanetasTable
+#     TABLE_PERSONAS:
+#       Ref: PersonasTable
+
+# iamRoleStatements:
+#     - Effect: Allow
+#       Action:
+#         - dynamodb:*
+#       Resource:
+#         - "Fn::GetAtt": [PlanetasTable, Arn]
+#         - "Fn::GetAtt": [PersonasTable, Arn]
+	
 functions:
-  api:
-    handler: index.handler
-    events:
-      - httpApi:
-          path: /
-          method: get
+  - ${file(./src/routes/index.yml)}
+  - ${file(./src/routes/persona.yml)}
+
+# resources:
+#   Resources:
+#     PersonasTable:
+#       Type: AWS::DynamoDB::Table
+#       Properties:
+#         TableName: PersonasTable
+#         AttributeDefinitions:
+#           - AttributeName: id
+#             AttributeType: S
+#         KeySchema:
+#           - AttributeName: id
+#             KeyType: HASH
+#         BillingMode: PAY_PER_REQUEST
+#     PlanetasTable:
+#       Type: AWS::DynamoDB::Table
+#       Properties:
+#         TableName: PlanetasTable
+#         AttributeDefinitions:
+#           - AttributeName: id
+#             AttributeType: S
+#         KeySchema:
+#           - AttributeName: id
+#             KeyType: HASH  
+#         BillingMode: PAY_PER_REQUEST
+
+  
