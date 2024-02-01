@@ -6,47 +6,50 @@ provider:
   runtime: nodejs18.x
   region: us-east-2
 
-# environment:
-#     TABLE_PLANETAS:
-#       Ref: PlanetasTable
-#     TABLE_PERSONAS:
-#       Ref: PersonasTable
+  environment:
+    TABLE_PLANETAS:
+      Ref: PlanetasTable
+    TABLE_PERSONAS:
+      Ref: PersonasTable
 
-# iamRoleStatements:
-#     - Effect: Allow
-#       Action:
-#         - dynamodb:*
-#       Resource:
-#         - "Fn::GetAtt": [PlanetasTable, Arn]
-#         - "Fn::GetAtt": [PersonasTable, Arn]
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource:
+        - "Fn::GetAtt": [PlanetasTable, Arn]
+        - "Fn::GetAtt": [PersonasTable, Arn]
 	
 functions:
   - ${file(./src/routes/index.yml)}
   - ${file(./src/routes/persona.yml)}
+  - ${file(./src/routes/planeta.yml)}
 
-# resources:
-#   Resources:
-#     PersonasTable:
-#       Type: AWS::DynamoDB::Table
-#       Properties:
-#         TableName: PersonasTable
-#         AttributeDefinitions:
-#           - AttributeName: id
-#             AttributeType: S
-#         KeySchema:
-#           - AttributeName: id
-#             KeyType: HASH
-#         BillingMode: PAY_PER_REQUEST
-#     PlanetasTable:
-#       Type: AWS::DynamoDB::Table
-#       Properties:
-#         TableName: PlanetasTable
-#         AttributeDefinitions:
-#           - AttributeName: id
-#             AttributeType: S
-#         KeySchema:
-#           - AttributeName: id
-#             KeyType: HASH  
-#         BillingMode: PAY_PER_REQUEST
+resources:
+  Resources:
+  
+    PersonasTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: PersonasTable
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
+
+    PlanetasTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: PlanetasTable
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH  
+        BillingMode: PAY_PER_REQUEST
 
   
