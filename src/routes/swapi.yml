@@ -1,9 +1,14 @@
-index:
+swapiIndex:
   handler: src/services/swapi/index.index
   events:
     - httpApi: 'GET /swapi'
 
-model:
+swapiModel:
   handler: src/services/swapi/model.model
   events:
     - httpApi: 'GET /swapi/{model}'
+
+swapiShow:
+  handler: src/services/swapi/show.show
+  events:
+    - httpApi: 'GET /swapi/{model}/{id}'

@@ -20,7 +20,7 @@ module.exports.show = async (event) => {
 
         const Persona = result.Item;
 
-        return response({ message: 'Show success', Persona, event })
+        return response({ message: 'Show success', Persona })
 
     } catch (error) {
         return response({ message: 'Show error', error, event }, 400)

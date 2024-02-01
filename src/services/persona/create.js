@@ -27,7 +27,7 @@ module.exports.create = async (event) => {
             Item: Persona
         }).promise();
 
-        return response({ message: 'Create success', Persona, event })
+        return response({ message: 'Create success', Persona })
 
     } catch (error) {
         return response({ message: 'Create fail', error }, 400)

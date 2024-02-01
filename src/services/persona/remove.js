@@ -20,7 +20,7 @@ module.exports.remove = async (event) => {
 
         const Persona = result.Item;
 
-        return response({ message: 'Remove success', Persona, event })
+        return response({ message: 'Remove success', Persona })
 
     } catch (error) {
         return response({ message: 'Remove error', error, event })

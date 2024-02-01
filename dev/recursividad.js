@@ -120,12 +120,19 @@ const replaceOriginalLink = (body, url = 'http://localhost:8000') => {
     const stringSinCaracteresEspeciales = removeAccentsAndSpecialChars(clavesTraducidas);
     const arrayClavesTraducidas = agregarPisos(stringSinCaracteresEspeciales.split(", "))
 
-    const arrayEN_ES = []
+    const objEN_ES = {}
+
+    console.log(`output->`, todasLasClaves, todasLasClaves[`length`]);
+    console.log(`output->`, arrayClavesTraducidas, todasLasClaves['length']);
 
     for (let i = 0; i < todasLasClaves.length; i++) {
-        arrayEN_ES[todasLasClaves[i]] = arrayClavesTraducidas[i];
+
+        console.log(todasLasClaves[i], arrayClavesTraducidas[i]);
+        
+        objEN_ES[todasLasClaves[i]] = arrayClavesTraducidas[i];
     }
-    const objetoTraducido = modificarClaves(objetos, arrayEN_ES)
+
+    const objetoTraducido = modificarClaves(objetos, objEN_ES)
 
     const objetoUrlPersonalizada = replaceOriginalLink(objetoTraducido)
     console.log(`output-objetoTraducido`, objetoUrlPersonalizada);

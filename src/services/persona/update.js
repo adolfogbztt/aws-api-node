@@ -41,7 +41,7 @@ module.exports.update = async (event) => {
 
     try {
         const { Attributes: Persona } = await dynamodb.update(params).promise();
-        return response({ message: 'Update success', Persona, event })
+        return response({ message: 'Update success', Persona })
 
     } catch (error) {
 

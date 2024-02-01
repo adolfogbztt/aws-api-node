@@ -145,7 +145,7 @@ const translate = async (body, event) => {
     console.log(`output->arrayClavesTraducidas`, arrayClavesTraducidas);
 
 
-    const arrayEN_ES = []
+    const arrayEN_ES = {}
 
     for (let i = 0; i < todasLasClaves.length; i++) {
         arrayEN_ES[todasLasClaves[i]] = arrayClavesTraducidas[i];

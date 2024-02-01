@@ -13,5 +13,5 @@ module.exports.index = async (event) => {
 
     const Personas = result.Items;
 
-    return response({ message: 'Get personas success', Personas, event })
+    return response({ message: 'Get personas success', Personas })
 }
