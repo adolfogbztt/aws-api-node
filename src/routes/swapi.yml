@@ -1,0 +1,9 @@
+index:
+  handler: src/services/swapi/index.index
+  events:
+    - httpApi: 'GET /swapi'
+
+model:
+  handler: src/services/swapi/model.model
+  events:
+    - httpApi: 'GET /swapi/{model}'
