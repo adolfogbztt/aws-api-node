@@ -6,6 +6,9 @@
 */
 const response = (content, code = 200) => {
     return {
+        headers: {
+            "Content-Type": "application/json"
+        },
         statusCode: code,
         body: JSON.stringify(
             content,

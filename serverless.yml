@@ -6,12 +6,6 @@ provider:
   runtime: nodejs18.x
   region: us-east-2
 
-  environment:
-    TABLE_PLANETAS:
-      Ref: PlanetasTable
-    TABLE_PERSONAS:
-      Ref: PersonasTable
-
   iamRoleStatements:
     - Effect: Allow
       Action:
