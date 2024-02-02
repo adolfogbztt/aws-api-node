@@ -63,7 +63,7 @@ $ npm test
 La URL base de la API es: `https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/`
 
 ## Swagger REST API
-La URL base de la API es: `https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swagger`
+La URL Swagger de la API es: `https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swagger`
 
 
 ## Recursos Disponibles
