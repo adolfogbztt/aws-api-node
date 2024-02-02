@@ -21,6 +21,16 @@ Instale los paquetes necesario para el desarrollo de esta API
 $ npm i
 ```
 
+## Nombre de las Politicas requeridas AWS 
+
+```
+📦 AdministratorAccess
+📦 AmazonAPIGatewayAdministrator
+📦 AmazonDynamoDBFullAccess
+📦 AWSLambda_FullAccess
+📦 TranslateFullAccess
+```
+
 ## Deployment
 
 ```
@@ -73,7 +83,7 @@ La URL base de la API es: `https://4f3248cvmd.execute-api.us-east-1.amazonaws.co
 
 ```http
 POST /persona HTTP/1.1
-Host: https://xxxxxxx.execute-api.us-east-1.amazonaws.com
+Host: https://4f3248cvmd.execute-api.us-east-1.amazonaws.com
 
 {
     "message": "Get personas success",
