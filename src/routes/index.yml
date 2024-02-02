@@ -1,4 +1,6 @@
 home:
   handler: src/services/home.handler
   events:
-    - httpApi: 'GET /'
+    - httpApi:
+        method: GET
+        path: /

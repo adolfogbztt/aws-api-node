@@ -1,24 +1,36 @@
 personaIndex:
   handler: 'src/services/persona/index.index'
   events:
-    - httpApi: 'GET /persona'
+    - httpApi:
+        method: GET
+        path: /persona
 
 personaShow:
   handler: 'src/services/persona/show.show'
   events:
-    - httpApi: 'GET /persona/{id}'
+    - httpApi:
+        method: GET
+        path: /persona/{id}
 
 personaCreate:
   handler: 'src/services/persona/create.create'
   events:
-    - httpApi: 'POST /persona'
+    - httpApi:
+        method: POST
+        path: /persona
+        bodyType: 'Persona'
 
 personaUpdate:
   handler: 'src/services/persona/update.update'
   events:
-    - httpApi: 'PUT /persona/{id}'
+    - httpApi:
+        method: PUT
+        path: /persona/{id}
+        bodyType: 'Persona'
 
 personaRemove:
   handler: 'src/services/persona/remove.remove'
   events:
-    - httpApi: 'DELETE /persona/{id}'
+    - httpApi:
+        method: DELETE
+        path: /persona/{id}

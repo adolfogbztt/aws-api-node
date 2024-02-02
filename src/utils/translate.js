@@ -126,24 +126,13 @@ const translate = async (body, event) => {
 
     const todasLasClaves = obtenerTodasLasKeys(body).filter(v => isNaN(v));
 
-    console.log(`output->todasLasClaves`, todasLasClaves)
-
     const todasLasClavesClear = limpiarPisos(todasLasClaves);
-
-    console.log(`output->todasLasClavesClear`, todasLasClavesClear)
 
     const clavesTraducidas = await traducirClaves(todasLasClavesClear);
 
-    console.log(`output->clavesTraducidas`, clavesTraducidas);
-
     const stringSinCaracteresEspeciales = removeAccentsAndSpecialChars(clavesTraducidas);
 
-    console.log(`output->stringSinCaracteresEspeciales`, stringSinCaracteresEspeciales);
-
     const arrayClavesTraducidas = agregarPisos(stringSinCaracteresEspeciales.split(", "))
-
-    console.log(`output->arrayClavesTraducidas`, arrayClavesTraducidas);
-
 
     const arrayEN_ES = {}
 

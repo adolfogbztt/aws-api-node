@@ -1,7 +1,4 @@
-const { describe, it } = require('node:test');
-const assert = require('assert');
 const { validation } = require("../src/services/persona/validation");
-
 
 describe('validation function', () => {
     it('should return the same data if all properties are accepted', () => {
@@ -22,7 +19,7 @@ describe('validation function', () => {
             link: 'https://swapi.py4e.com/api/people/1/',
         };
 
-        assert.deepStrictEqual(validation(data), data);
+        expect(validation(data)).toEqual(data);
     });
 
     it('should throw an error if a property is missing', () => {
@@ -42,7 +39,7 @@ describe('validation function', () => {
             link: 'https://swapi.py4e.com/api/people/1/',
         };
 
-        assert.deepStrictEqual(validation(data), { error: 'No se proporcionaron todas las propiedades requeridas' });
+        expect(validation(data)).toEqual({ error: 'No se proporcionaron todas las propiedades requeridas' });
     });
 
     it('should throw an error if naves_estelares is not an array', () => {
@@ -63,6 +60,6 @@ describe('validation function', () => {
             link: 'https://swapi.py4e.com/api/people/1/',
         };
 
-        assert.deepStrictEqual(validation(data), { error: 'naves_estelares debe ser un array' });
+        expect(validation(data)).toEqual({ error: 'naves_estelares debe ser un array' });
     });
 });

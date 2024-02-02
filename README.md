@@ -1,3 +1,6 @@
+
+![Serverless Framework](https://blog.logicwind.com/content/images/size/w2000/2020/04/Serverless-1-862x492.png)
+
 # Documentación de Uso de la API REST
 
 ## Introducción
@@ -24,6 +27,12 @@ $ npm i
 $ serverless deploy
 ```
 
+## Unit Test
+
+```
+$ npm test
+```
+
 
 Después de la implementación, debería ver un resultado similar al siguiente:
 
@@ -32,7 +41,7 @@ Deploying aws-node-http-api-project to stage dev (us-east-1)
 
 ✔ Service deployed to stack aws-node-http-api-project-dev (152s)
 
-endpoint: GET - https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com/
+endpoint: GET - https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/
 functions:
   hello: ws-node-http-api-project (1.9 kB)
 ```
@@ -40,7 +49,7 @@ functions:
 
 
 ## Base URL
-La URL base de la API es: `https://xxxxxxx.execute-api.us-east-1.amazonaws.com/`
+La URL base de la API es: `https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/`
 
 
 ## Recursos Disponibles
@@ -86,7 +95,7 @@ Host: https://xxxxxxx.execute-api.us-east-1.amazonaws.com
             ],
             "piel_color": "blanco",
             "ano_nacimiento": 19,
-            "link": "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/persona/1",
+            "link": "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/persona/1",
             "especies": [
                 "humanoide"
             ],
@@ -129,56 +138,56 @@ Host: https://xxxxxxx.execute-api.us-east-1.amazonaws.com
         "productor": "Gary Kurtz, Rick McCallum",
         "fecha_de_lanzamiento": "1977-05-25",
         "personajes": [
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/1/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/2/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/3/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/4/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/5/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/6/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/7/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/8/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/9/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/10/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/12/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/13/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/14/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/15/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/16/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/18/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/19/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/people/81/"
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/1",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/2",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/3",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/4",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/5",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/6",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/7",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/8",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/9",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/10",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/12",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/13",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/14",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/15",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/16",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/18",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/19",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/people/81"
         ],
         "planetas": [
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/planets/1/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/planets/2/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/planets/3/"
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/planets/1",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/planets/2",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/planets/3"
         ],
         "naves_espaciales": [
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/starships/2/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/starships/3/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/starships/5/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/starships/9/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/starships/10/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/starships/11/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/starships/12/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/starships/13/"
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/starships/2",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/starships/3",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/starships/5",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/starships/9",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/starships/10",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/starships/11",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/starships/12",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/starships/13"
         ],
         "vehiculos": [
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/vehicles/4/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/vehicles/6/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/vehicles/7/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/vehicles/8/"
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/vehicles/4",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/vehicles/6",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/vehicles/7",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/vehicles/8"
         ],
         "especies": [
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/species/1/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/species/2/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/species/3/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/species/4/",
-            "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/species/5/"
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/species/1",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/species/2",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/species/3",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/species/4",
+            "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/species/5"
         ],
         "creado": "2014-12-10T14:23:31.880000Z",
         "editado": "2014-12-20T19:49:45.256000Z",
-        "URL": "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/swapi/films/1/"
+        "URL": "https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swapi/films/1"
     }
 }
 
@@ -192,4 +201,5 @@ Host: https://xxxxxxx.execute-api.us-east-1.amazonaws.com
 - `404 Not Found`: El recurso solicitado no fue encontrado.
 - `500 Internal Server Error`: Error interno del servidor.
 
-#### Para más detalles sobre el uso de cada endpoint y los parámetros aceptados, consulta la documentación específica de cada recurso.
+ 
+## [[Para más detalles sobre el uso de cada endpoint y los parámetros aceptados, consulta la documentación en este enlace.]](https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swagger)

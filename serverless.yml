@@ -31,5 +31,13 @@ resources:
           - AttributeName: id
             KeyType: HASH
         BillingMode: PAY_PER_REQUEST
+        
+plugins:
+  - serverless-offline
+  - serverless-auto-swagger
+
+custom:
+  autoswagger:
+    typefiles: ['./src/types/Persona.d.ts']
 
   

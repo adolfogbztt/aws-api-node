@@ -1,14 +1,26 @@
 swapiIndex:
   handler: src/services/swapi/index.index
   events:
-    - httpApi: 'GET /swapi'
+    - httpApi:
+        method: GET
+        path: /swapi
+
 
 swapiModel:
   handler: src/services/swapi/model.model
   events:
-    - httpApi: 'GET /swapi/{model}'
+    - httpApi:
+        method: GET
+        path: /swapi/{model}
+        queryStringParameters:
+          page:
+              required: false
+              type: integer
+              description: numero de la paginacion
 
 swapiShow:
   handler: src/services/swapi/show.show
   events:
-    - httpApi: 'GET /swapi/{model}/{id}'
+    - httpApi:
+        method: GET
+        path: /swapi/{model}/{id}
