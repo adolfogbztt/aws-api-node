@@ -1,7 +1,7 @@
 
 ![Serverless Framework](https://blog.logicwind.com/content/images/size/w2000/2020/04/Serverless-1-862x492.png)
 
-# Documentación de Uso de la API REST
+# Documentación de uso de la API REST
 
 ## Introducción
 Bienvenido a la documentación de uso de la API REST. Esta API proporciona acceso a recursos relacionados con la integracion de SWAPI la API que brinda informacion del universo de Star Wars.
@@ -27,11 +27,6 @@ $ npm i
 $ serverless deploy
 ```
 
-## Unit Test
-
-```
-$ npm test
-```
 
 
 Después de la implementación, debería ver un resultado similar al siguiente:
@@ -46,10 +41,19 @@ functions:
   hello: ws-node-http-api-project (1.9 kB)
 ```
 
+## Unit Test
+
+```
+$ npm test
+```
+
 
 
 ## Base URL
 La URL base de la API es: `https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/`
+
+## Swagger REST API
+La URL base de la API es: `https://4f3248cvmd.execute-api.us-east-1.amazonaws.com/swagger`
 
 
 ## Recursos Disponibles
